@@ -20,7 +20,7 @@ const CollectionItem = ({ item, addItem }) => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      {/* <CardActionArea> */}
+      <div className={classes.imageContainer}>
         <CardMedia
           component="img"
           alt={name}
@@ -28,15 +28,15 @@ const CollectionItem = ({ item, addItem }) => {
           title={name}
           className={classes.image}
         />
+        </div>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
+          <Typography gutterBottom variant="h6" component="h2" className={classes.title}>
             {name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {price}
           </Typography>
         </CardContent>
-      {/* </CardActionArea> */}
       <CardActions>
         <Button size="small" color="primary">
           Share

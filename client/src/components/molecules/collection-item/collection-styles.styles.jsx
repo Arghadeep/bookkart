@@ -70,9 +70,14 @@ export const styles = theme => {
   image: {
     width: '100%',
     height: theme.spacing(50),
-    backgroundSize: 'cover',
+    // objectFit: 'contain',
     backgroundPosition: 'center',
     marginBottom: '5px',
+
+  },
+  imageContainer: {
+    maxWidth: '100%',
+    overflow: 'hidden',
   }
 }
 }
