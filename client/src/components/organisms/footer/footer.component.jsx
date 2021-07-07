@@ -52,7 +52,7 @@ const Footer = ({ currentUser, hidden, signOutStart }) => {
 
   const displayDesktop = () => {
     return (
-      <div>FOOTER DESKTOP</div>
+      <Box></Box>
     );
   };
 

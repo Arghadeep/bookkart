@@ -14,7 +14,7 @@ const CollectionPage = ({ collection }) => {
   const classes = useStyles();
   const { title, items } = collection;
   return (
-    <div>
+    <div style={{padding: '0 40px'}}>
       <h2 className={classes.title}>{title}</h2>
       <Grid container  spacing={2}>
         {items.map(item => (
