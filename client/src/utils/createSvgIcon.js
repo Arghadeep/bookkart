@@ -3,6 +3,7 @@ import React from 'react';
 import SvgIcon from '../components/atoms/svgIcon';
 
 export default function createSvgIcon(path, displayName, viewBox) {
+  console.log('path', path, 'displayName', displayName, 'viewBox', viewBox);
   const Component = React.memo(
     React.forwardRef((props, ref) => {
       const { inlineTitle = '', ...updateProps } = viewBox
