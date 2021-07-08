@@ -24,6 +24,9 @@ const App = ({ checkUserSession, currentUser, collectionsArray }) => {
   // useEffect(() => {
   //   addCollectionAndDocuments('collections', collectionsArray);
   // });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />

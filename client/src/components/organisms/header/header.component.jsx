@@ -12,6 +12,7 @@ import { selectCurrentUser } from '../../../redux/user/user.selectors';
 import { signOutStart } from '../../../redux/user/user.actions';
 import {styles} from './header.styles';
 import { ReactComponent as Logo } from '../../../assets/Book.svg';
+import BookkartLogo from '../../../styles/svgIcons/Book'
 
 const headersData = [
   {
@@ -54,7 +55,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
   const displayDesktop = () => {
     return (
       <Toolbar className={classes.toolbar}>
-        {BookkartLogo}
+        {BookkartLogoRender}
         <div className={classes.headerRightContent}>
           <div>{getMenuButtons()}
           {currentUser ? (
@@ -120,7 +121,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
           <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
 
-        <div>{BookkartLogo}</div>
+        <div>{BookkartLogoRender}</div>
         <CartIcon />
         {hidden ? null : <CartDropdown />}
       </Toolbar>
@@ -145,12 +146,12 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
     });
   };
 
-  const BookkartLogo = (
+  const BookkartLogoRender = (
     <Link {...{
       component: RouterLink,
       to: "/",
     }}>
-      <Logo className={classes.logo} />
+      <BookkartLogo className={classes.logo} />
     </Link>
   );
 

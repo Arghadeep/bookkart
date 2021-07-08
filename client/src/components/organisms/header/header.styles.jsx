@@ -16,6 +16,8 @@ export const styles = theme => {
       fontWeight: 600,
       color: "#FFFEFE",
       textAlign: "left",
+      width: '64px',
+      height:'48px',
     },
     menuButton: {
       fontFamily: "Open Sans, sans-serif",
