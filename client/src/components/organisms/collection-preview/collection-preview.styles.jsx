@@ -19,3 +19,4 @@ export const TitleContainer = styled.h1`
 export const PreviewContainer = styled.div`
 
 `;
+

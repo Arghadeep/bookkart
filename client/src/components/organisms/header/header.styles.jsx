@@ -2,11 +2,14 @@ export const styles = theme => {
   return{
     header: {
       backgroundColor: "#123C69",
-      paddingRight: "79px",
       paddingLeft: "22px",
       "@media (max-width: 900px)": {
         paddingLeft: 0,
       },
+    },
+    headerMobile: {
+      display: 'flex',
+      justifyContent: 'space-between',
     },
     headerRightContent:{
       display:'flex',

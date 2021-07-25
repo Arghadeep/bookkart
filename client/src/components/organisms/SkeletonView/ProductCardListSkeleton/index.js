@@ -28,7 +28,7 @@ const ProductCardListSkeleton = (props) => {
         className={classes.productContainer}
       >
         {items.map((i) => (
-          <Grid item key={i} xs={12} md={3} spacing={2}>
+          <Grid item key={i} xs={12} sm={6} md={4} lg={3} spacing={2}>
             <Card className={classes.root}>
               <div className={classes.imageContainer}>
                 <Skeleton
