@@ -5,6 +5,7 @@ export const styles = theme => {
       padding: '20px 40px',
       "@media (max-width: 900px)": {
         paddingLeft: 0,
+        paddingRight: '20px',
       },
     },
     footerLeftWrapper: {
@@ -27,6 +28,10 @@ export const styles = theme => {
       display: 'flex',
       justifyContent: 'space-between',
       width: '50%',
+      [theme.breakpoints.down('md')]: {
+        width: '100%',
+        justifyContent: 'space-around',
+      },
     },
     iconWrapper: {
       borderWidth: '2px !important',
@@ -60,5 +65,23 @@ export const styles = theme => {
     footerQuickLinkList: {
      color: 'white',
     },
+    footerAccordion: {
+      width: '100%',
+      '& .MuiPaper-root': {
+        backgroundColor: 'inherit',
+        color: 'white',  
+        paddingLeft: theme.spacing(3),
+        '& .MuiAccordionSummary-root': {
+          padding: 0,
+        },
+      }
+    },
+    accordionExpandIcon:{
+      color: 'white',
+    },
+    footerTopWrapper:{
+      padding: theme.spacing(0,0,0,2),
+      justifyContent: 'space-between',
+    }
  }
  }

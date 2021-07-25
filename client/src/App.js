@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -17,6 +17,10 @@ import Footer from './components/organisms/footer/footer.component';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
+// const ShopPage = React.lazy(() => import('./pages/shop/shop.component'));
+// const ContactUsPage = React.lazy(() => import('./pages/contact-us/contact-us.component'));
+// const SignInAndSignUpPage = React.lazy(() => import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
+// const CheckoutPage = React.lazy(() => import('./pages/checkout/checkout.component'));
 const App = ({ checkUserSession, currentUser, collectionsArray }) => {
   useEffect(() => {
     checkUserSession();

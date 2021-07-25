@@ -18,7 +18,22 @@ const settings = {
   slidesToShow: 4,
   slidesToScroll: 1,
   speed: 2000,
-  arrows: false
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 850,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 1
+      }
+    },
+
+  ]
 };
 
 const CollectionPreview = ({ title, items, history, match, routeName }) => (

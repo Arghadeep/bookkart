@@ -1,7 +1,6 @@
 export const styles = (theme) => {
   return {
     root: {
-      width: '22vw',
       height: '100%',
       display: 'flex',
       flexDirection: 'column',

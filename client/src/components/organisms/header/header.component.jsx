@@ -98,31 +98,59 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
       setState((prevState) => ({ ...prevState, drawerOpen: false }));
 
     return (
-      <Toolbar>
-        <IconButton
-          {...{
-            edge: "start",
-            color: "inherit",
-            "aria-label": "menu",
-            "aria-haspopup": "true",
-            onClick: handleDrawerOpen,
-          }}
-        >
-          <MenuIcon />
-        </IconButton>
+      <Toolbar className={classes.toolbar}>
+        <div style={{display:'flex'}}>
+            <IconButton
+              {...{
+                edge: "start",
+                color: "inherit",
+                "aria-label": "menu",
+                "aria-haspopup": "true",
+                onClick: handleDrawerOpen,
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
 
-        <Drawer
-          {...{
-            anchor: "left",
-            open: drawerOpen,
-            onClose: handleDrawerClose,
-          }}
-        >
-          <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
-        </Drawer>
-
-        <div>{BookkartLogoRender}</div>
-        <CartIcon />
+            <Drawer
+              {...{
+                anchor: "left",
+                open: drawerOpen,
+                onClose: handleDrawerClose,
+              }}
+            >
+              <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
+            </Drawer>
+            {BookkartLogoRender}
+        </div>
+        <div className={classes.headerRightContent}>
+          {currentUser ? (
+              <Button
+              {...{
+                component: RouterLink,
+                color: "inherit",
+                style: { textDecoration: "none" },
+                className: classes.menuButton,
+                onClick: signOutStart
+              }}
+            >
+              SIGN OUT
+            </Button>
+            ) : (
+              <Button
+              {...{
+                component: RouterLink,
+                to: "/signin",
+                color: "inherit",
+                style: { textDecoration: "none" },
+                className: classes.menuButton
+              }}
+            >
+              SIGN IN
+            </Button>
+            )}
+          <CartIcon />
+        </div>
         {hidden ? null : <CartDropdown />}
       </Toolbar>
     );
